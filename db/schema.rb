@@ -24,9 +24,6 @@ ActiveRecord::Schema.define(version: 20180127232946) do
     t.integer "base_rank"
     t.integer "sub_rank"
     t.string "product_dimensions"
-    t.decimal "price"
-    t.decimal "sale_price"
-    t.decimal "saved_amount"
     t.string "asin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
