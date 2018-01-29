@@ -10,30 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129011842) do
+ActiveRecord::Schema.define(version: 20180129060608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
-    t.bigint "product_informations_id"
     t.string "rank"
     t.string "category_type"
     t.string "ladder"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["product_informations_id"], name: "index_categories_on_product_informations_id"
+    t.bigint "product_information_id"
+    t.index ["product_information_id"], name: "index_categories_on_product_information_id"
   end
 
   create_table "product_informations", force: :cascade do |t|
     t.string "product_img"
     t.string "product_name"
-    t.integer "num_customer_reviews"
+    t.string "num_customer_reviews"
     t.string "product_dimensions"
     t.string "asin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "categories", "product_informations", column: "product_informations_id"
+  add_foreign_key "categories", "product_informations"
 end
