@@ -1,0 +1,4 @@
+module CategorySubInformationAttr
+  include ProductDetailPageDistinguisher
+
+end
