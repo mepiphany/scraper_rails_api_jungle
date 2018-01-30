@@ -36,17 +36,3 @@ module CategoryBaseInformationAttr
   end
 
 end
-
-# div id=detail-bullets
-    # td class=bucket
-        # div class=content
-            # li contains production dimensions titles are bold
-            # li contains asin
-# getting the product rank
-    # id=SalesRank
-
-# base_category
-# base_rank
-# sub_category
-# sub_rank
-# dimension
